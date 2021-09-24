@@ -1,0 +1,37 @@
+@function text($mytext, $Default: 16px) {
+  @return ($mytext/$Default) * 1rem;
+}
+
+@mixin  display($disply,$position-x,$position-y,$flow) {
+  display: $disply;
+  justify-content: $position-x;
+  align-items: $position-y;
+  flex-flow: $flow;
+}
+@mixin grid($display,$colFill,$row,$gap) {
+  display: $display;
+  grid-template-columns: $colFill;
+  grid-template-rows: $row;
+  gap: $gap;
+}
+@mixin  position($positon,$Top,$left,$bottom,$righ,$z-index) {
+  position: $positon;
+  top: $Top;
+  left: $left;
+  bottom: $bottom;
+  right: $righ;
+  z-index: $z-index;
+}
+@mixin ease {
+  transition: all .3s ease;
+}
+@mixin  shadow {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+@mixin lap {
+  @media screen  and (min-width:1000px){
+    @content;
+  }
+}

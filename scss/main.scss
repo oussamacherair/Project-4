@@ -1,0 +1,1014 @@
+@import "reset";
+@import "Tooling";
+@import "animaton";
+@import "mixing";
+
+article {
+  max-width: 1300px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+///Header
+
+header {
+  width: 100%;
+  min-height: text(50px);
+  color: darken($color, 100);
+  .navbar {
+    width: 100%;
+    padding-bottom: 0.5rem;
+    background: rgb(15, 28, 46);
+    @include display(flex, space-evenly, normal, normal);
+    .nav-right {
+      //flex-basis: 15%;
+      align-self: center;
+      @include display(flex, space-around, normal, normal);
+      .logo {
+        a {
+          width: text(80px);
+          min-height: text(60px);
+          display: inline-block;
+          font-family: $logo-font;
+          font-size: text(22px);
+          color: $color;
+          img {
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      .location {
+        align-self: center;
+        color: white;
+        h3 {
+          .area {
+            font-weight: bolder;
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+
+            i {
+              margin-left: -0.5rem;
+            }
+          }
+        }
+      }
+    }
+    ///
+    .nav-fill {
+      flex-basis: 55%;
+      align-self: center;
+      &-select {
+        position: relative;
+        select {
+          @include position(absolute, text(4px), text(5px), "", "", 1000);
+          background: none;
+          border: none;
+          opacity: 0;
+          option {
+            padding: 0.5rem 0;
+          }
+        }
+      }
+      .Search-input {
+        min-height: text(40px);
+        width: 100%;
+
+        input {
+          width: 100%;
+          padding: text(10px) text(10px) text(10px) 0;
+          text-indent: text(65px);
+          border-radius: 10px 10px;
+          font-size: text(16px);
+          border: none;
+        }
+      }
+      .Menu {
+        position: relative;
+        a {
+          @include position(absolute, text(-1px), "", text(-38.7px), "", 1);
+          padding: text(12px);
+          background: #ee7d27;
+          color: $color;
+          border-radius: text(10px) 0 0 text(10px);
+          font-size: text(14px);
+          i {
+            margin-left: 0.3rem;
+          }
+        }
+      }
+      .SBtn {
+        position: relative;
+        a {
+          //display: inline-block;
+          @include position(absolute, text(-41px), "", text(2px), 0, 1);
+          padding: text(12px);
+          background: #ee7d27;
+          color: $color;
+          font-size: text(14px);
+          border-radius: 0 text(10px) text(10px) 0;
+        }
+      }
+    }
+
+    .nav-left {
+      position: relative;
+      flex-basis: 20%;
+      align-self: center;
+      color: $color;
+      @include display(flex, space-around, center, normal);
+      h3 {
+        font-size: text(14px);
+        a {
+          color: $color;
+          @include ease;
+          &:hover {
+            color: darken($color, 5);
+          }
+        }
+        span {
+          display: block;
+        }
+      }
+      .info {
+        min-width: text(500px);
+        padding: 0.7rem 0.7rem 0rem 0.5rem;
+        background: $color;
+        color: darken($color, 100%);
+        @include display(flex, normal, normal, column);
+        gap: 1rem;
+        @include position(absolute, text(50px), "", "", 0, 1000);
+        @include shadow;
+        .sign_in_btn {
+          align-self: center;
+          text-align: center;
+          width: 100%;
+          a.sign_btn {
+            display: inline-block;
+            padding: 0.5rem 4rem;
+            margin-bottom: 0.5rem;
+            background: $sec-color;
+            color: $color;
+            border-radius: text(50px);
+            font-size: text(14px);
+            @include ease;
+            &:hover {
+              background: lighten($sec-color, 10);
+            }
+          }
+          p {
+            font-size: text(12px);
+            font-weight: 700;
+            color: darken($color, 100%);
+            .Sign_up {
+              color: $sec-color;
+              font-weight: bolder;
+              @include ease;
+              &:hover {
+                text-decoration: underline;
+                color: lighten($sec-color, 10);
+              }
+            }
+          }
+        }
+        ////
+        .Your_details {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: auto;
+          gap: 1rem;
+          border-top: 1px solid #eee;
+          padding: 1rem;
+          ul {
+            .title {
+              font-weight: bolder;
+              font-size: text(16px);
+            }
+            li {
+              padding: 0.3rem 0 0.3rem 0;
+              font-size: text(13px);
+              line-height: text(12px);
+              a {
+                color: darken($color, 90%);
+                font-weight: 500;
+                letter-spacing: 1px;
+                @include ease;
+                &:hover {
+                  color: darken($color, 100%);
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+          .right {
+            border-right: 1px solid #eee;
+          }
+        }
+        &::before {
+          @include position(absolute, text(-8px), 50%, "", "", 100);
+          content: "";
+          width: text(15px);
+          height: text(15px);
+          background: $color;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+  nav {
+    width: 100%;
+    background: rgba(15, 28, 46, 0.911);
+    padding: 0.5rem 1rem;
+    @include display(flex, space-between, normal, normal);
+    font-size: text(14px);
+    .nav-right {
+      @include display(flex, normal, center, normal);
+      flex: 0 0 50%;
+      h3 > a {
+        color: $color;
+        font-size: text(18px);
+        font-weight: bolder;
+        padding-right: 1rem;
+      }
+      ul {
+        @include display(flex, space-between, center, normal);
+        flex: 0 0 80%;
+
+        a {
+          color: $color;
+          padding: 0.5rem;
+          @include ease;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .nav-left {
+      h3 {
+        a {
+          font-size: text(15px);
+          color: $color;
+          padding: 0.5rem;
+          @include ease;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+//aside bar
+.side-menu {
+  width: 100%;
+  height: 100vh;
+  background: #0000007a;
+  @include position(absolute, 0, "", "", "", 100);
+  @include ease;
+  overflow: hidden;
+
+  .side-bar {
+    @include position(absolute, 0, -100%, "", "", 110);
+
+    height: 100vh;
+    width: text(365px);
+    overflow-y: scroll;
+    @include ease;
+    &-header {
+      h3 {
+        padding: 1rem 0 1rem text(36px);
+        font-size: text(19px);
+        line-height: text(25px);
+        letter-spacing: text(1px);
+        background: #232f3e;
+        color: $color;
+        cursor: pointer;
+        i {
+          font-size: text(25px);
+          padding-right: 0.4rem;
+        }
+      }
+    }
+    &-body {
+      padding: 0 0 0.5rem 0;
+      background: $color;
+      div {
+        padding: 0.5rem 0;
+        .title {
+          font-size: text(17px);
+          padding: 1rem 0 1rem text(36px);
+          color: darken($color, 100);
+          letter-spacing: text(1px);
+          font-weight: 700;
+        }
+        ul {
+          li {
+            padding: 0.7rem 0.7rem 1rem text(36px);
+            font-size: text(14px);
+            line-height: text(16px);
+            @include display(flex, space-between, center, "");
+            font-weight: 600;
+            @include ease;
+            cursor: pointer;
+            &:hover {
+              background: darken($color, 10);
+              .fa-chevron-right,
+              .fa-chevron-down {
+                color: darken($color, 100);
+              }
+            }
+            a {
+              color: darken($color, 100);
+              .fa-chevron-down {
+                padding: 0 0 0 0.7rem;
+              }
+            }
+            .fa-chevron-right,
+            .fa-chevron-down {
+              padding-right: 1rem;
+              color: darken($color, 40);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .close-btn {
+    @include position(absolute, text(5px), 30%, "", "", 10);
+    color: white;
+    i {
+      cursor: pointer;
+    }
+  }
+}
+
+section {
+  transition: transform 1s, opacity 1s;
+  .content {
+    padding: 1rem;
+  }
+  /// recomdation
+
+  //// cards section
+  .Sign-card {
+    z-index: 10;
+  }
+  .Cards-content {
+    @include grid(grid, repeat(auto-fit, minmax(250px, 1fr)), auto, 1rem);
+    .sign-up-card {
+      padding: 0.5rem 0.5rem 2.5rem 0.5rem;
+      margin-bottom: text(27px);
+      background: $color;
+      h3 {
+        padding: 0.5rem 0 1rem 0.5rem;
+        font-weight: 700;
+        font-size: text(20px);
+        line-height: text(27.3px);
+      }
+      a {
+        display: inline-block;
+        width: 100%;
+        padding: 0.5rem 0;
+        text-align: center;
+        margin-bottom: 0.5rem;
+        background: $sec-color;
+        color: $color;
+        border-radius: text(50px);
+        font-size: text(14px);
+        @include ease;
+        &:hover {
+          background: lighten($sec-color, 10);
+        }
+      }
+    }
+    .fly {
+      width: 100%;
+      img {
+        width: inherit;
+      }
+    }
+    ///
+
+    .card {
+      padding: 1rem;
+      position: relative;
+      background: $color;
+      max-width: text(400px);
+      display: flex;
+      flex-flow: column;
+
+      ///
+
+      ///
+      &-heade {
+        padding: 1rem 0;
+        h2 {
+          padding: 0.5rem 0;
+          font-weight: 700;
+          font-size: text(20px);
+          line-height: text(27.3px);
+        }
+      }
+      &-body {
+        overflow: hidden;
+        width: 100%;
+        padding-bottom: 2rem;
+        h6 {
+          font-size: text(14px);
+          color: darken($color, 100);
+          padding: 0.5rem 0;
+        }
+
+        .Enter-list {
+          @include display(flex, center, center, normal);
+        }
+      }
+      .product-content {
+        @include grid(grid, repeat(2, 1fr), auto, 1rem);
+        .product {
+          width: 100%;
+          img {
+            max-width: 100%;
+          }
+        }
+      }
+      &-shop {
+        margin: auto 0;
+        padding: 1rem 0;
+        @include position(absolute, "", "", 0, "", 1);
+        h4 {
+          a {
+            color: $sec-color;
+          }
+        }
+      }
+    }
+  }
+
+  ////sliders section
+  .slide-body {
+    background: $color;
+    position: relative;
+    padding: 1rem 0.5rem;
+    min-width: 100%;
+    min-height: 300px;
+
+    h4.title {
+      padding: 0.5rem 0 1rem 0.5rem;
+      font-weight: 700;
+      font-size: text(20px);
+      line-height: text(27.3px);
+      a {
+        font-size: text(14px);
+        padding-left: 0.5rem;
+        color: $sec-color;
+      }
+    }
+    .btn-right
+    {
+      @include position(absolute,text(100px),'','',0,100);
+      @include display(flex,center,center,column);
+      content: '';
+      width: text(50px);
+      height: text(100px);
+      background: rgba(255, 255, 255, 0.918);
+      @include shadow;
+    }
+    .product-list-slide {
+      min-width: 100%;
+      @include position(absolute,'','','','',10);
+      content: '';
+      @include ease;
+
+    }
+    ul {
+      @include grid(grid, normal, auto, 1rem);
+      min-width: 100%;
+      @include ease;
+      position: relative;
+      li {
+        margin: 0 0 0 2rem;
+        a {
+          padding: 0 1rem;
+          img {
+            width: auto;
+            height: auto;
+            max-width: 270px;
+            max-height: 200px;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+  //
+}
+
+//
+.section-a {
+  height: 600px;
+  width: 100%;
+
+  position: relative;
+  .slide {
+    @include display(flex, center, center, row nowrap);
+    @include position(absolute, "", "", "", "", 0);
+    width: 100%;
+    @include ease;
+    img {
+      min-width: 100%;
+    }
+  }
+}
+//
+.section-b {
+  // @include position(absolute, text(-350px), 0, 0, 0, 1);
+  margin-top: -23rem;
+}
+///content footer
+.content-footer {
+  padding: 3rem 0 1rem 0;
+  background: $color;
+  margin-top: 1rem;
+  font-weight: 700;
+  .col {
+    @include display(flex, center, center, normal);
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 2rem 0 1rem 0;
+    .body {
+      //border-top: 1px solid #eee;
+      padding: 1rem 0 0.5rem 0;
+      margin-bottom: 1rem;
+      position: relative;
+      text-align: center;
+      h2,
+      h4 {
+        font-size: text(12px);
+        line-height: text(12px);
+        letter-spacing: text(1px);
+        a {
+          font-size: text(12px);
+          background: $color;
+        }
+      }
+      a.btn {
+        display: inline-block;
+
+        padding: 0.5rem 4rem;
+        margin: 0.5rem 0;
+        background: $sec-color;
+        color: $color;
+        border-radius: text(50px);
+        font-size: text(12px);
+        font-weight: 700;
+        @include ease;
+        &:hover {
+          background: lighten($sec-color, 10);
+        }
+      }
+    }
+  }
+}
+///footer
+.footer {
+  background: #232f3e;
+  .up {
+    text-align: center;
+    padding: 1rem;
+    background: #37475a;
+    cursor: pointer;
+    @include ease;
+    &:hover {
+      background: lighten(#37475a, 5);
+    }
+    a {
+      color: $color;
+      font-weight: 600;
+      letter-spacing: text(1px);
+      font-size: text(12px);
+    }
+  }
+  &-nav {
+    @include display(flex, space-around, flex-start, row nowrap);
+
+    padding: 2rem 4rem;
+    border-bottom: 1px solid #3a4553;
+    ul {
+      .title {
+        font-weight: 600;
+        color: $color;
+        font-size: text(15px);
+        letter-spacing: text(1px);
+      }
+      li {
+        padding: 0.5rem 0;
+
+        a {
+          color: darken($color, 13);
+          font-size: text(14px);
+          @include ease;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  &-body {
+    padding: 2rem 0 1rem 0;
+    position: relative;
+    .body-list {
+      @include display(flex, center, center, "");
+      .logo {
+        font-family: $logo-font;
+        font-size: text(30px);
+        color: #ee7d27;
+        letter-spacing: text(1px);
+        margin-right: 1rem;
+      }
+      ul.pref {
+        @include display(flex, space-around, center, row nowrap);
+        li {
+          border: 1px solid #848688;
+          padding: 0.5rem 1.2rem 0.5rem 0.5rem;
+          margin-right: 0.5rem;
+          cursor: pointer;
+
+          @include ease;
+          &:hover {
+            border: 1px solid lighten(#848688, 10);
+          }
+          a,
+          span {
+            color: $color;
+            font-size: text(13px);
+            position: relative;
+            i {
+              padding-right: 0.259rem;
+            }
+          }
+        }
+        .language {
+          padding-right: 3rem;
+          a {
+            &::after,
+            &::before {
+              @include position(absolute, "", "", "", "", 10);
+              content: "";
+              transform: scale(0.7);
+            }
+            ///////////
+            &::after {
+              border-left: 5px solid transparent;
+              border-right: 5px solid transparent;
+              border-top: 5px solid #848688;
+              bottom: text(5px);
+              left: text(94px);
+            }
+            ////
+            &::before {
+              border-left: 5px solid transparent;
+              border-right: 5px solid transparent;
+              border-bottom: 5px solid #848688;
+              left: text(94px);
+            }
+          }
+        }
+      }
+    }
+
+    .language-list {
+      position: relative;
+
+      .hove_on {
+        @include position(absolute, text(18px), text(438px), "", "", 10);
+        content: "";
+        background: $color;
+        padding: 1rem;
+        &::before {
+          content: "";
+          @include position(absolute, text(-7px), text(141px), "", "", 10);
+          width: text(15px);
+          height: text(15px);
+          background: $color;
+          transform: rotate(45deg);
+        }
+        h3.title {
+          font-size: text(13px);
+          font-weight: 600;
+          line-height: text(16px);
+          padding: 0.5rem 0;
+          a {
+            font-size: text(12px);
+            color: $sec-color;
+            padding-left: 0.5rem;
+          }
+        }
+        .language-list-current {
+          border-bottom: 2px solid #eee;
+        }
+        label {
+          @include display(flex, normal, center, row nowrap);
+          padding: 0.5rem 0;
+          font-size: text(13px);
+          h5 {
+            padding-left: 0.5rem;
+          }
+        }
+      }
+      .click-on {
+        width: 100%;
+
+        letter-spacing: text(1px);
+        @include display(flex, center, flex-start, row nowrap);
+
+        @include position(absolute, text(20px), "", "", "", 100);
+        .container {
+          h3,
+          h4 {
+            font-weight: 700;
+            font-size: text(14px);
+            padding-bottom: 0.5rem;
+          }
+          width: text(600px);
+          background: $color;
+          @include shadow;
+          border-radius: 7px;
+          @include grid(grid, repeat(2, 1fr), auto, 1rem);
+          overflow: hidden;
+
+          .click-on-title,
+          .btns {
+            grid-column: span 2;
+            padding: 1rem;
+          }
+          .click-on-title {
+            background: #f0f2f2;
+            h3 {
+              font-size: text(16px);
+              font-weight: 600;
+              i {
+                color: #848688;
+              }
+            }
+          }
+          //////
+          .left {
+            padding: 1rem;
+            .language-list-current {
+              border-bottom: 2px solid #eee;
+              margin-bottom: 1rem;
+            }
+            label {
+              @include display(flex, normal, center, row nowrap);
+              padding: 0.5rem 0;
+              font-size: text(13px);
+              h5 {
+                padding-left: 0.5rem;
+                font-weight: 700;
+              }
+            }
+          }
+
+          ////
+          .right {
+            padding: 1rem;
+
+            p {
+              font-size: text(13px);
+              line-height: text(20px);
+              font-weight: 600;
+              margin-bottom: 1rem;
+              a {
+                color: lighten($sec-color, 10);
+              }
+            }
+          }
+
+          ///
+          .btns {
+            text-align: right;
+            a {
+              @include shadow;
+              display: inline-block;
+              padding: 0.5rem 1rem;
+              color: $color;
+              border-radius: 10px;
+              font-size: text(13px);
+              @include ease;
+            }
+            .cancel {
+              color: darken($color, 90);
+              border: 1px solid #d5d9d9;
+              font-weight: 700;
+              &:hover {
+                background: darken($color, 5);
+                box-shadow: none;
+              }
+            }
+            .changes {
+              background: $sec-color;
+              color: $color;
+              &:hover {
+                background: lighten($sec-color, 5);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    ////
+    .Region {
+      width: text(600px);
+      border-radius: 7px;
+      @include position(absolute, text(94px), 30%, "", 50%, 10);
+      content: "";
+      background: #f0f2f2;
+
+      &-header {
+        padding: 1rem;
+
+        h3 {
+          font-size: text(16px);
+          font-weight: 600;
+        }
+      }
+      &-body {
+        padding: 0.5rem 1rem;
+        width: 100%;
+        background: $color;
+        @include grid(grid, repeat(2, 1fr), auto, 1rem);
+
+        .title {
+          font-weight: 700;
+          font-size: text(14px);
+          padding-bottom: 2rem;
+          line-height: text(16px);
+        }
+        .right {
+          &-body {
+            position: relative;
+            &-btn {
+              margin-bottom: 1rem;
+              display: inline-block;
+              @include shadow;
+              a {
+                padding: 0.4rem 0.5rem;
+                background: #f0f2f2;
+                font-size: text(12px);
+                font-weight: 600;
+                color: darken($color, 100);
+                border-radius: text(7px);
+                border: 1px solid #d5d9d9;
+                @include shadow;
+                @include ease;
+                i {
+                  padding-left: 0.5rem;
+                }
+                &:hover {
+                  background: #d1d4d4;
+                }
+              }
+            }
+            ul {
+              height: text(400px);
+              overflow-y: scroll;
+              width: 100%;
+              background: #f0f2f2;
+
+              @include position(absolute, "", "", "", "", 100);
+              content: "";
+              li {
+                padding: 0.5rem;
+                a {
+                  color: darken($color, 100);
+                  font-size: text(13px);
+                }
+              }
+            }
+
+            h3 {
+              font-size: text(13px);
+              font-weight: bolder;
+              padding: 1rem 0;
+              line-height: text(20px);
+              letter-spacing: text(1px);
+            }
+          }
+        }
+
+        .left {
+          p {
+            padding: 1rem 0;
+            font-size: text(13px);
+            line-height: text(20px);
+            letter-spacing: text(1px);
+            font-weight: 700;
+          }
+        }
+        .btns {
+          grid-column: span 2;
+          padding: 1rem 0;
+          text-align: right;
+          a {
+            @include shadow;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            color: $color;
+            border-radius: 10px;
+            font-size: text(13px);
+            @include ease;
+          }
+          .btn-cancel {
+            color: darken($color, 90);
+            border: 1px solid #d5d9d9;
+            font-weight: 700;
+            &:hover {
+              background: darken($color, 5);
+              box-shadow: none;
+            }
+          }
+          .btn-go {
+            background: $sec-color;
+            color: $color;
+            &:hover {
+              background: lighten($sec-color, 5);
+            }
+          }
+        }
+      }
+    }
+
+    //////
+    .footer-footer {
+      ul {
+        @include grid(grid, repeat(7, 1fr), auto, 1rem);
+      }
+    }
+  }
+
+  //////
+  .footer-footer {
+    width: 100%;
+    padding: 2rem 1rem 1rem 1rem;
+    background: #131a22;
+    .spons {
+      padding: 1rem 1rem 0 0;
+      max-width: 1000px;
+      margin: 0 auto;
+
+      ul {
+        @include grid(grid, repeat(7, 1fr), auto, 2rem);
+
+        li {
+          line-height: text(16px);
+          a {
+            color: $color;
+            font-size: text(11px);
+            font-weight: 700;
+            span {
+              display: block;
+              font-weight: 100;
+              color: darken($color, 10);
+            }
+          }
+        }
+      }
+      .about-our-business {
+        grid-column: span;
+        padding: 1rem;
+        text-align: center;
+        a {
+          color: $color;
+          font-size: text(11px);
+          padding-right: 0.5rem;
+          margin-top: 1rem;
+        }
+      }
+      a {
+        @include ease;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.hide {
+  display: none !important;
+}
+
+.slide-body {
+  width: 100%;
+  position: relative;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}

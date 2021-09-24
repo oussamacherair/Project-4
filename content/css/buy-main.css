@@ -1,0 +1,704 @@
+@import url("https://fonts.googleapis.com/css2?family=Style+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+* {
+  box-sizing: border-box; }
+
+.wrapper {
+  position: relative;
+  background: #eaeded; }
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  text-decoration: none;
+  vertical-align: baseline;
+  font-family: 'Poppins', sans-serif;
+  list-style: none; }
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0; }
+
+body {
+  line-height: 1;
+  color: black;
+  background: white; }
+
+ol,
+ul {
+  list-style: none; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0; }
+
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: ""; }
+
+blockquote,
+q {
+  quotes: "" ""; }
+
+nav {
+  background: #001f3c;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row nowrap;
+  min-height: 2.5rem;
+  padding: 0.5rem 0; }
+  nav .logo-container {
+    flex: 0 0 30%;
+    align-self: center; }
+    nav .logo-container a.logo {
+      display: flex;
+      justify-content: normal;
+      align-items: center;
+      flex-flow: row nowrap;
+      color: #fff; }
+      nav .logo-container a.logo img {
+        width: 4.375rem; }
+      nav .logo-container a.logo span {
+        font-size: 1.1875rem;
+        letter-spacing: 0.0625rem;
+        line-height: 1.4375rem; }
+  nav .progress ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row nowrap;
+    min-height: 3.5625rem; }
+    nav .progress ul li {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.0625rem;
+      margin-right: 1rem;
+      text-transform: uppercase; }
+      nav .progress ul li span {
+        display: inline-block;
+        width: 1.5625rem;
+        height: 1.5625rem;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        line-height: 25px;
+        text-align: center;
+        transition: all .3s ease; }
+      nav .progress ul li span.done {
+        background: #fff;
+        color: #001f3c; }
+
+.step-1 .progress_1,
+.step-1 .progress_2,
+.step-1 .progress_3,
+.step-2 .progress_1,
+.step-2 .progress_2,
+.step-2 .progress_3 {
+  max-width: 1800px;
+  min-height: 700px;
+  height: inherit;
+  transition: all .3s ease; }
+  .step-1 .progress_1 section,
+  .step-1 .progress_2 section,
+  .step-1 .progress_3 section,
+  .step-2 .progress_1 section,
+  .step-2 .progress_2 section,
+  .step-2 .progress_3 section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    min-height: 700px; }
+  .step-1 .progress_1 footer,
+  .step-1 .progress_2 footer,
+  .step-1 .progress_3 footer,
+  .step-2 .progress_1 footer,
+  .step-2 .progress_2 footer,
+  .step-2 .progress_3 footer {
+    position: relative;
+    top: calc(100vh - 861px);
+    font-size: 0.75rem;
+    color: #565959 !important;
+    padding: 1rem 0 1rem 3rem;
+    font-weight: 700;
+    line-height: 1.5; }
+    .step-1 .progress_1 footer p,
+    .step-1 .progress_2 footer p,
+    .step-1 .progress_3 footer p,
+    .step-2 .progress_1 footer p,
+    .step-2 .progress_2 footer p,
+    .step-2 .progress_3 footer p {
+      padding-bottom: 1rem; }
+    .step-1 .progress_1 footer a,
+    .step-1 .progress_2 footer a,
+    .step-1 .progress_3 footer a,
+    .step-2 .progress_1 footer a,
+    .step-2 .progress_2 footer a,
+    .step-2 .progress_3 footer a {
+      color: #007185;
+      padding-right: 1rem;
+      transition: all .3s ease; }
+      .step-1 .progress_1 footer a:hover,
+      .step-1 .progress_2 footer a:hover,
+      .step-1 .progress_3 footer a:hover,
+      .step-2 .progress_1 footer a:hover,
+      .step-2 .progress_2 footer a:hover,
+      .step-2 .progress_3 footer a:hover {
+        text-decoration: underline; }
+
+.step-1 .progress_1 .content,
+.step-2 .progress_1 .content {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  max-width: 49.375rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 0; }
+  .step-1 .progress_1 .content .right,
+  .step-1 .progress_1 .content .left,
+  .step-2 .progress_1 .content .right,
+  .step-2 .progress_1 .content .left {
+    padding: 2rem;
+    font-size: 0.9375rem;
+    height: 100%; }
+    .step-1 .progress_1 .content .right .header,
+    .step-1 .progress_1 .content .left .header,
+    .step-2 .progress_1 .content .right .header,
+    .step-2 .progress_1 .content .left .header {
+      color: #001f3c;
+      font-size: 1.25rem;
+      font-weight: 900;
+      line-height: 1.875rem;
+      letter-spacing: 1px;
+      padding: 0.5rem 0 1rem 0; }
+  .step-1 .progress_1 .content .right .header,
+  .step-2 .progress_1 .content .right .header {
+    color: #001f3c !important; }
+  .step-1 .progress_1 .content .right .body-content label,
+  .step-2 .progress_1 .content .right .body-content label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    color: black;
+    margin-bottom: 1rem;
+    display: inline-block; }
+  .step-1 .progress_1 .content .right .body-content input,
+  .step-2 .progress_1 .content .right .body-content input {
+    display: block;
+    margin: 0.5rem 0;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px #ddd solid;
+    border-radius: 4px; }
+    .step-1 .progress_1 .content .right .body-content input:focus,
+    .step-2 .progress_1 .content .right .body-content input:focus {
+      outline: 1px solid #ee7d27;
+      box-shadow: 0px 0px 8px 0px #ee7d27; }
+  .step-1 .progress_1 .content .right .body-content input[type="submit"],
+  .step-2 .progress_1 .content .right .body-content input[type="submit"] {
+    transition: all .3s ease;
+    color: #fff;
+    background: #007185;
+    cursor: pointer;
+    margin-top: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; }
+    .step-1 .progress_1 .content .right .body-content input[type="submit"]:hover,
+    .step-2 .progress_1 .content .right .body-content input[type="submit"]:hover {
+      background: #00879f; }
+    .step-1 .progress_1 .content .right .body-content input[type="submit"]:focus,
+    .step-2 .progress_1 .content .right .body-content input[type="submit"]:focus {
+      outline: none;
+      box-shadow: none; }
+  .step-1 .progress_1 .content .right .body-content .steps,
+  .step-2 .progress_1 .content .right .body-content .steps {
+    font-size: 0.8125rem;
+    margin-top: 2rem;
+    position: relative; }
+    .step-1 .progress_1 .content .right .body-content .steps p.yourStep,
+    .step-2 .progress_1 .content .right .body-content .steps p.yourStep {
+      line-height: 1.25rem;
+      font-weight: 600;
+      padding-bottom: 1rem; }
+    .step-1 .progress_1 .content .right .body-content .steps ol,
+    .step-2 .progress_1 .content .right .body-content .steps ol {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.0625rem;
+      padding: 0 0 0 1rem; }
+      .step-1 .progress_1 .content .right .body-content .steps ol li,
+      .step-2 .progress_1 .content .right .body-content .steps ol li {
+        list-style: decimal !important;
+        padding: 0.5rem 0; }
+        .step-1 .progress_1 .content .right .body-content .steps ol li a,
+        .step-2 .progress_1 .content .right .body-content .steps ol li a {
+          display: block;
+          color: #007185;
+          padding: 0.5rem 0;
+          transition: all .3s ease; }
+          .step-1 .progress_1 .content .right .body-content .steps ol li a:hover,
+          .step-2 .progress_1 .content .right .body-content .steps ol li a:hover {
+            text-decoration: underline; }
+    .step-1 .progress_1 .content .right .body-content .steps .popup,
+    .step-2 .progress_1 .content .right .body-content .steps .popup {
+      position: absolute;
+      top: "";
+      left: "";
+      bottom: "";
+      right: "";
+      z-index: 100;
+      content: "";
+      padding: 1rem;
+      line-height: 1.25rem;
+      font-size: 0.75rem;
+      color: black;
+      font-weight: 700;
+      background: #fff;
+      border: 2px #ddd solid;
+      transition: all .3s ease;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; }
+      .step-1 .progress_1 .content .right .body-content .steps .popup::before,
+      .step-2 .progress_1 .content .right .body-content .steps .popup::before {
+        position: absolute;
+        top: -0.625rem;
+        left: 50%;
+        bottom: "";
+        right: "";
+        z-index: 100;
+        content: "";
+        width: 1rem;
+        height: 1rem;
+        transform: rotate(45deg);
+        background-color: #fff;
+        border-top: 2px #ddd solid;
+        border-left: 2px #ddd solid; }
+  .step-1 .progress_1 .content .left,
+  .step-2 .progress_1 .content .left {
+    padding-right: 0rem !important;
+    padding-bottom: 0rem !important;
+    background: #001f3c;
+    color: #fff; }
+    .step-1 .progress_1 .content .left .header,
+    .step-2 .progress_1 .content .left .header {
+      color: #fff !important;
+      font-size: 1.375rem; }
+    .step-1 .progress_1 .content .left .body ul,
+    .step-2 .progress_1 .content .left .body ul {
+      padding: 0 0.5rem 0 0; }
+      .step-1 .progress_1 .content .left .body ul li,
+      .step-2 .progress_1 .content .left .body ul li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: row nowrap;
+        padding: 1rem 0; }
+        .step-1 .progress_1 .content .left .body ul li i,
+        .step-2 .progress_1 .content .left .body ul li i {
+          font-size: 1.75rem; }
+        .step-1 .progress_1 .content .left .body ul li div,
+        .step-2 .progress_1 .content .left .body ul li div {
+          align-self: center; }
+        .step-1 .progress_1 .content .left .body ul li div.pros,
+        .step-2 .progress_1 .content .left .body ul li div.pros {
+          flex: 0 0 85%; }
+        .step-1 .progress_1 .content .left .body ul li h4,
+        .step-2 .progress_1 .content .left .body ul li h4 {
+          font-size: 1rem;
+          padding-bottom: 0.5rem;
+          font-weight: 700; }
+        .step-1 .progress_1 .content .left .body ul li p,
+        .step-2 .progress_1 .content .left .body ul li p {
+          font-size: 0.75rem;
+          line-height: 1.125rem; }
+          .step-1 .progress_1 .content .left .body ul li p a,
+          .step-2 .progress_1 .content .left .body ul li p a {
+            color: #fff;
+            text-decoration: underline; }
+    .step-1 .progress_1 .content .left .body .img,
+    .step-2 .progress_1 .content .left .body .img {
+      padding: 3rem 0;
+      background: url(../../content/img/city.svg) no-repeat bottom; }
+    .step-1 .progress_1 .content .left .footer,
+    .step-2 .progress_1 .content .left .footer {
+      padding: 1rem;
+      text-align: center;
+      background: #0d2c49; }
+      .step-1 .progress_1 .content .left .footer a,
+      .step-2 .progress_1 .content .left .footer a {
+        color: #fff;
+        font-size: 0.75rem;
+        text-decoration: underline; }
+
+.step-1 .progress_1 .information-content,
+.step-2 .progress_1 .information-content {
+  max-width: 24.0625rem;
+  padding: 1rem;
+  margin-bottom: 2rem; }
+  .step-1 .progress_1 .information-content .title,
+  .step-2 .progress_1 .information-content .title {
+    font-weight: bolder;
+    font-size: 1.625rem;
+    padding: 0.5rem 0;
+    line-height: 1.75rem; }
+  .step-1 .progress_1 .information-content div,
+  .step-2 .progress_1 .information-content div {
+    padding: 0.5rem 0 0 0; }
+    .step-1 .progress_1 .information-content div label,
+    .step-2 .progress_1 .information-content div label {
+      font-weight: 600;
+      font-size: 0.8125rem; }
+    .step-1 .progress_1 .information-content div input,
+    .step-1 .progress_1 .information-content div select,
+    .step-2 .progress_1 .information-content div input,
+    .step-2 .progress_1 .information-content div select {
+      display: block;
+      margin: 0.5rem 0;
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px #ddd solid;
+      border-radius: 4px; }
+      .step-1 .progress_1 .information-content div input:focus,
+      .step-1 .progress_1 .information-content div select:focus,
+      .step-2 .progress_1 .information-content div input:focus,
+      .step-2 .progress_1 .information-content div select:focus {
+        outline: 1px solid #ee7d27;
+        box-shadow: 0px 0px 8px 0px #ee7d27; }
+    .step-1 .progress_1 .information-content div input[type="checkbox"],
+    .step-1 .progress_1 .information-content div input[type="radio"],
+    .step-2 .progress_1 .information-content div input[type="checkbox"],
+    .step-2 .progress_1 .information-content div input[type="radio"] {
+      display: inline !important;
+      border: none;
+      width: auto; }
+    .step-1 .progress_1 .information-content div input[type="submit"],
+    .step-2 .progress_1 .information-content div input[type="submit"] {
+      transition: all .3s ease;
+      color: #fff;
+      background: #007185;
+      cursor: pointer;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      margin-bottom: 1rem; }
+      .step-1 .progress_1 .information-content div input[type="submit"]:hover,
+      .step-2 .progress_1 .information-content div input[type="submit"]:hover {
+        background: #00879f; }
+      .step-1 .progress_1 .information-content div input[type="submit"]:focus,
+      .step-2 .progress_1 .information-content div input[type="submit"]:focus {
+        outline: none;
+        box-shadow: none; }
+    .step-1 .progress_1 .information-content div p,
+    .step-2 .progress_1 .information-content div p {
+      font-size: 0.9375rem;
+      line-height: 1rem;
+      padding: 0.5rem 0;
+      font-weight: 600;
+      line-height: 1.5; }
+      .step-1 .progress_1 .information-content div p a,
+      .step-2 .progress_1 .information-content div p a {
+        color: #4995b3;
+        transition: all .3s ease; }
+        .step-1 .progress_1 .information-content div p a:hover,
+        .step-2 .progress_1 .information-content div p a:hover {
+          color: #007185;
+          text-decoration: underline; }
+    .step-1 .progress_1 .information-content div p.info,
+    .step-2 .progress_1 .information-content div p.info {
+      font-size: 0.75rem;
+      border-top: 1px solid #d3d5d8;
+      margin: 1rem 0 0 0;
+      padding-top: 1rem; }
+    .step-1 .progress_1 .information-content div .choise,
+    .step-2 .progress_1 .information-content div .choise {
+      display: flex;
+      justify-content: normal;
+      align-items: normal;
+      flex-flow: row nowrap; }
+      .step-1 .progress_1 .information-content div .choise input,
+      .step-1 .progress_1 .information-content div .choise p,
+      .step-1 .progress_1 .information-content div .choise label,
+      .step-2 .progress_1 .information-content div .choise input,
+      .step-2 .progress_1 .information-content div .choise p,
+      .step-2 .progress_1 .information-content div .choise label {
+        align-self: flex-start;
+        padding: 0 0 0 0.5rem; }
+      .step-1 .progress_1 .information-content div .choise label,
+      .step-2 .progress_1 .information-content div .choise label {
+        line-height: 1.1875rem;
+        padding: 0.2rem 0 0 0.5rem; }
+      .step-1 .progress_1 .information-content div .choise p,
+      .step-2 .progress_1 .information-content div .choise p {
+        padding: 0.2rem 0 0 0.5rem; }
+  .step-1 .progress_1 .information-content .fields,
+  .step-2 .progress_1 .information-content .fields {
+    padding: 1rem 0;
+    border-top: 1px #ddd solid; }
+
+.step-1 .progress_2 form,
+.step-2 .progress_2 form {
+  max-width: 23.125rem;
+  border: 1px #ddd solid;
+  border-radius: 4px;
+  padding: 1.25rem 1.375rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; }
+  .step-1 .progress_2 form .title,
+  .step-2 .progress_2 form .title {
+    font-weight: bolder;
+    font-size: 1.625rem;
+    padding: 0.5rem 0;
+    line-height: 1.75rem; }
+  .step-1 .progress_2 form div,
+  .step-2 .progress_2 form div {
+    padding: 0.5rem 0 0 0; }
+    .step-1 .progress_2 form div label,
+    .step-2 .progress_2 form div label {
+      font-weight: 600;
+      font-size: 0.8125rem; }
+    .step-1 .progress_2 form div input,
+    .step-2 .progress_2 form div input {
+      display: block;
+      margin: 0.5rem 0;
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px #ddd solid;
+      border-radius: 4px; }
+      .step-1 .progress_2 form div input:focus,
+      .step-2 .progress_2 form div input:focus {
+        outline: 1px solid #ee7d27;
+        box-shadow: 0px 0px 8px 0px #ee7d27; }
+    .step-1 .progress_2 form div input[type="submit"],
+    .step-2 .progress_2 form div input[type="submit"] {
+      transition: all .3s ease;
+      color: #fff;
+      background: #007185;
+      cursor: pointer;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; }
+      .step-1 .progress_2 form div input[type="submit"]:hover,
+      .step-2 .progress_2 form div input[type="submit"]:hover {
+        background: #00879f; }
+      .step-1 .progress_2 form div input[type="submit"]:focus,
+      .step-2 .progress_2 form div input[type="submit"]:focus {
+        outline: none;
+        box-shadow: none; }
+    .step-1 .progress_2 form div p,
+    .step-2 .progress_2 form div p {
+      font-size: 0.75rem;
+      line-height: 1rem;
+      padding: 0.5rem 0;
+      font-weight: 600;
+      line-height: 1.5; }
+      .step-1 .progress_2 form div p a,
+      .step-2 .progress_2 form div p a {
+        color: #4995b3;
+        transition: all .3s ease; }
+        .step-1 .progress_2 form div p a:hover,
+        .step-2 .progress_2 form div p a:hover {
+          color: #007185;
+          text-decoration: underline; }
+    .step-1 .progress_2 form div p.note,
+    .step-2 .progress_2 form div p.note {
+      margin: 0.5rem 0 0 0;
+      padding: 0.5rem 1rem;
+      font-size: 0.75rem;
+      color: #4995b3; }
+    .step-1 .progress_2 form div a.btn,
+    .step-2 .progress_2 form div a.btn {
+      color: #4995b3;
+      transition: all .3s ease; }
+      .step-1 .progress_2 form div a.btn:hover,
+      .step-2 .progress_2 form div a.btn:hover {
+        color: #007185;
+        text-decoration: underline; }
+    .step-1 .progress_2 form div a,
+    .step-2 .progress_2 form div a {
+      color: #4995b3;
+      padding: 0.2rem 0;
+      transition: all .3s ease; }
+      .step-1 .progress_2 form div a:hover,
+      .step-2 .progress_2 form div a:hover {
+        color: #007185;
+        text-decoration: underline; }
+
+.step-1 .progress_3 .OTP-content,
+.step-2 .progress_3 .OTP-content {
+  max-width: 23.125rem;
+  padding: 1.25rem 1.625rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border: 1px #ddd solid;
+  border-radius: 4px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; }
+  .step-1 .progress_3 .OTP-content article,
+  .step-2 .progress_3 .OTP-content article {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 0.5rem; }
+    .step-1 .progress_3 .OTP-content article .title,
+    .step-2 .progress_3 .OTP-content article .title {
+      font-weight: bolder;
+      font-size: 1.625rem;
+      padding: 0.5rem 0;
+      line-height: 1.75rem; }
+    .step-1 .progress_3 .OTP-content article p,
+    .step-2 .progress_3 .OTP-content article p {
+      line-height: 1.1875rem;
+      padding: 0.5rem 0;
+      font-size: 0.8125rem; }
+    .step-1 .progress_3 .OTP-content article a,
+    .step-2 .progress_3 .OTP-content article a {
+      color: #007185;
+      padding-right: 1rem;
+      transition: all .3s ease; }
+      .step-1 .progress_3 .OTP-content article a:hover,
+      .step-2 .progress_3 .OTP-content article a:hover {
+        text-decoration: underline; }
+  .step-1 .progress_3 .OTP-content form,
+  .step-2 .progress_3 .OTP-content form {
+    max-width: 23.125rem;
+    margin-bottom: 0.5rem; }
+    .step-1 .progress_3 .OTP-content form div,
+    .step-2 .progress_3 .OTP-content form div {
+      padding: 0.5rem 0 0 0; }
+      .step-1 .progress_3 .OTP-content form div label,
+      .step-2 .progress_3 .OTP-content form div label {
+        font-weight: 600; }
+      .step-1 .progress_3 .OTP-content form div input,
+      .step-2 .progress_3 .OTP-content form div input {
+        display: block;
+        margin: 0.5rem 0;
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px #ddd solid;
+        border-radius: 4px; }
+        .step-1 .progress_3 .OTP-content form div input:focus,
+        .step-2 .progress_3 .OTP-content form div input:focus {
+          outline: 1px solid #ee7d27;
+          box-shadow: 0px 0px 8px 0px #ee7d27; }
+      .step-1 .progress_3 .OTP-content form div input[type="submit"],
+      .step-2 .progress_3 .OTP-content form div input[type="submit"] {
+        transition: all .3s ease;
+        color: #fff;
+        background: #007185;
+        cursor: pointer; }
+        .step-1 .progress_3 .OTP-content form div input[type="submit"]:hover,
+        .step-2 .progress_3 .OTP-content form div input[type="submit"]:hover {
+          background: #00879f; }
+        .step-1 .progress_3 .OTP-content form div input[type="submit"]:focus,
+        .step-2 .progress_3 .OTP-content form div input[type="submit"]:focus {
+          outline: none;
+          box-shadow: none; }
+  .step-1 .progress_3 .OTP-content p,
+  .step-2 .progress_3 .OTP-content p {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    line-height: 1.5; }
+    .step-1 .progress_3 .OTP-content p a,
+    .step-2 .progress_3 .OTP-content p a {
+      color: #4995b3;
+      transition: all .3s ease; }
+      .step-1 .progress_3 .OTP-content p a:hover,
+      .step-2 .progress_3 .OTP-content p a:hover {
+        color: #007185;
+        text-decoration: underline; }
+  .step-1 .progress_3 .OTP-content a,
+  .step-2 .progress_3 .OTP-content a {
+    color: #007185;
+    padding-right: 1rem;
+    transition: all .3s ease; }
+    .step-1 .progress_3 .OTP-content a:hover,
+    .step-2 .progress_3 .OTP-content a:hover {
+      text-decoration: underline; }
+
+.hide {
+  display: none; }
+
+.PassContainer {
+  position: relative;
+  width: 100%; }
+  .PassContainer-state {
+    position: absolute;
+    top: "";
+    left: 0;
+    bottom: 2.4375rem;
+    right: 0;
+    z-index: 100;
+    content: "";
+    height: 0.1875rem;
+    background: red;
+    padding: 0 !important;
+    transition: width 0.5s ease-in, background 0.2s ease-out;
+    width: 0%;
+    border-radius: 4px; }
