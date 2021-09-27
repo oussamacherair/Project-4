@@ -267,7 +267,7 @@
 
 footer {
   position: relative;
-  top: calc(100vh - 747px);
+  height: calc(100vh - 547px);
   @include display(flex, center, center, column);
   font-size: 13px;
   font-weight: 600;

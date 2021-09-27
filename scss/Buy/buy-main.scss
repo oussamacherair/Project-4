@@ -11,6 +11,7 @@ nav {
   padding: 0.5rem 0;
   //
   .logo-container {
+    display: block ;
     flex: 0 0 30%;
     align-self: center;
 
@@ -578,3 +579,4 @@ nav {
     border-radius: 4px;
   }
 }
+@import '../Buy/buy-mobile';

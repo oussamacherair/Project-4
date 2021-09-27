@@ -257,6 +257,7 @@ header {
       }
     }
   }
+  
 }
 //aside bar
 .side-menu {
@@ -1012,3 +1013,8 @@ section {
   opacity: 0;
   transform: translateY(8rem);
 }
+.content-sm,
+  .footer-md {
+    display: none !important;
+  }
+@import 'desktop';

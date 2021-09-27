@@ -120,7 +120,6 @@ nav {
   min-height: 2.5rem;
   padding: 0.5rem 0; }
   nav .logo-container {
-    display: block;
     flex: 0 0 30%;
     align-self: center; }
     nav .logo-container a.logo {
@@ -701,51 +700,3 @@ nav {
     transition: width 0.5s ease-in, background 0.2s ease-out;
     width: 0%;
     border-radius: 4px; }
-
-@media screen and (max-width: 1000px) {
-  nav {
-    padding: 0.5rem; }
-    nav .logo-container {
-      display: none; }
-    nav .progress ul.Prog_list li {
-      font-size: 66%; }
-  .progress_1 .content {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
-    padding: 1rem; }
-    .progress_1 .content .left {
-      order: 1;
-      flex: 0 0 100%;
-      padding: 0.7rem !important; }
-      .progress_1 .content .left .body ul {
-        padding: 0 0.5rem 0 0; }
-        .progress_1 .content .left .body ul li {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          flex-flow: column !important;
-          padding: 1rem 0; }
-          .progress_1 .content .left .body ul li i {
-            font-size: 2.625rem !important;
-            display: block;
-            padding: 0.5rem; }
-      .progress_1 .content .left .body .img {
-        padding: 3rem 0;
-        background: url(../../content/img/city.svg) no-repeat bottom; }
-    .progress_1 .content .right {
-      order: 2;
-      flex: 0 0 100%; } }
-
-footer {
-  position: static !important; }
-  footer p {
-    padding-bottom: 1rem; }
-  footer a {
-    color: #007185;
-    padding-right: 1rem;
-    display: block !important;
-    transition: all .3s ease; }
-    footer a:hover {
-      text-decoration: underline; }

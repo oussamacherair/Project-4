@@ -1,0 +1,66 @@
+@include desk {
+  nav {
+    padding: 0.5rem;
+    .logo-container {
+      display: none;
+    }
+    .progress {
+      ul.Prog_list {
+        li {
+          font-size: 66%;
+        }
+      }
+    }
+  }
+
+  .progress_1 {
+    .content {
+      @include display(flex !important, center, center, row wrap);
+      padding: 1rem;
+      .left {
+        order: 1;
+        flex: 0 0 100%;
+        padding: 0.7rem !important;
+        .body {
+          ul {
+            padding: 0 0.5rem 0 0;
+            li {
+              @include display(flex, space-between, center, column !important);
+              padding: 1rem 0;
+              i {
+                font-size: text(42px) !important;
+                display: block;
+                padding: 0.5rem;
+              }
+            }
+          }
+          .img {
+            padding: 3rem 0;
+            background: url(../../content/img/city.svg) no-repeat bottom;
+          }
+        }
+      }
+      .right {
+        order: 2;
+        flex: 0 0 100%;
+      }
+    }
+    
+  }
+}
+
+footer {
+    position: static !important;
+    p {
+      padding-bottom: 1rem;
+    }
+    a {
+      color: $sec-color;
+      padding-right: 1rem;
+      display: block !important;
+      @include ease;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }

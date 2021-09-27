@@ -291,7 +291,7 @@ function AccountReady(e) {
     )
     Baccs.push(BussinessAccountReady)
     localStorage.setItem('BussinessAccount', JSON.stringify(Baccs));
-    setTimeout(() => window.location.href = 'http://127.0.0.1:5500/content/index.html', 2000)
+    setTimeout(() => window.location.href = 'file:///I:/10%20project%207.21/Project%204/content/index.html', 2000)
 
 
 

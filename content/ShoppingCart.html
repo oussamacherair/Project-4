@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="fontawesome/css/all.css" />
     <link rel="stylesheet" href="css/Cart-min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
+    <script defer src="Js/Cart-main.js"></script>
     <title>ShopCart</title>
   </head>
 
@@ -130,7 +131,7 @@
 
           <div class="nav-left">
             <h3 class="sign-here">
-              <a href="join-us.html" class="ShowInfo">
+              <a href="javascript:void(0)" class="ShowInfo">
                 <span>Hello, Sign in</span>
                 <span>Account & lists <i class="fas fa-sort-down"></i></span
               ></a>
@@ -224,7 +225,7 @@
            <div class="sm-top-L">
 
              <div class="sign">
-               <h4> <span class="Account-name">Sign In ></span> <i class="fas fa-user fa-2x"></i> </h4>
+             <a href="./join-us.html"><h4><span class="Account-name">Sign In ></span> <i class="fas fa-user fa-2x"></i></h4></a>  
              </div>
              <div class="cart-icon">
                <img src="./img/cart.png" alt="">
@@ -246,18 +247,18 @@
       </header>
 
 
-      <div class="cart">
+      <div class="cart-container">
         <div class="product-list">
           <div class="product-list-header">
             <h3>Buy Again</h3>
           </div>
           
-          <div class="cart-body">
+          <div class="product-list-body">
 
-            <div class="cart-body-header">
+            <div class="product-list-body-header">
 
               <h2 class="header">Subtotal <sup>$</sup> <span class="price-total">500</span><sup>99</sup> </h2>
-              <div class="cart-body-header-checkout">
+              <div class="product-list-body-header-checkout">
                 <a href="" class="btn-checkout">Proceed to checkout (<span class="itmes-count">2</span> items)</a>
               </div>
               <div class="gift">
@@ -272,9 +273,12 @@
           <div class="cart-body-content">
             <div class="products">
               <div class="product">
-                <div class="img-product">
-                  <img src="./img/product-shop-slider/8.jpg" alt="">
+                <div class="product-info">
+
+                  <div class="img-product">
+                  <img src="./img/product-shop-slider/8.png" alt="">
                 </div>
+
                 <div class="details-product">
 
                   <h3 class="product-name-cart">
@@ -296,46 +300,84 @@
                     <div class="product-state-details">
                       <h5 class="stock in out">In Stock</h5>
                       <p>
-                        <span class="Style">Style: 3200MHZ</span> <br>
-                        <span class="Size">Size: 16GB Kit (2x8GB)</span><br>
-                        <span class="color">Color: Black</span>
+                        <span class="Style">Style: </span>3200MHZ <br>
+                        <span class="Size">Size: </span>16GB Kit (2x8GB)<br>
+                        <span class="color">Color: </span>Black
                       </p>
                     </div>
-
-
                   </div>
+                </div>
 
-                  <div class="amount">
-                    <div class="btns">
 
-                      <div class="del">
-                        <i class="fas fa-trash-alt"></i>
-                      </div>
-
-                      <div class="input">00</div>
-
-                      <div class="add">
-                        <i class="fas fa-plus"></i>
-                      </div>
-
-                    </div>
-                  </div>
-
-                  <div class="product-saving">
-                    <a href="" class="btn">Delete</a>
-
-                    <a href="" class="btn">Save for later</a>
-                  </div>
 
                 </div>
-                <h3><a href="">Compare with similar items</a></h3>
+                <div class="info-product-amount">
+                  <div class="amount">
+                 <div class="btns">
+
+                   <div class="del">
+                     <i class="fas fa-trash-alt"></i>
+                   </div>
+
+                   <div class="input">00</div>
+
+                   <div class="add">
+                     <i class="fas fa-plus"></i>
+                   </div>
+
+                 </div>
+               </div>
+
+               <div class="product-saving">
+                 <a href="javascript:void(0)" class="btn">Delete</a>
+
+                 <a href="javascript:void(0)" class="btn">Save for later</a>
+               </div>
+               </div>
+                <h3 class="com"><a href="javascript:void(0)">Compare with similar items</a></h3>
               </div>
             </div>
-            <div class="saved-products">
+
+            <div class="saved">
+              <div class="saved-products">
+            
               <div class="saved-products-header">
                 <h2>Saved for later (<span class="saved-item-count">1</span> item)</h2>
               </div>
+              <div class="product">
+                <div class="product-info">
+
+                  <div class="img-product">
+                  <img src="./img/product-shop-slider/9.jpg" alt="t">
+                </div>
+
+                <div class="details-product">
+
+                  <h3 class="product-name-cart">
+                    SAPPHIRE Radeon 11265-05-20G Pulse RX 580 8GB GDDR5 Dual HDMI/ DVI-D...
+
+                  </h3>
+                  <div class="product-state">
+                    <div class="product-state-price">
+                      <h3 class="price"><sup>$</sup>77<sup>99</sup></h3>
+                    </div>
+
+                    <div class="btns">
+                      <a href="javascript:void(0)" class="del">Delete</a>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                </div>
+                
+                
+              </div>
             </div>
+
+            </div>
+            
           </div>
 
         </div>
@@ -1749,31 +1791,31 @@
                             </div>
                             <div class="right-body">
                                 <div class="right-body-btn">
-                                    <a href="javascript: void(0)javascript:void(0)" class="yourCu">United States <i
+                                    <a href="javascript:void(0)" class="yourCu">United States <i
                                             class="fas fa-chevron-down"></i></a>
                                 </div>
 
                                 <ul class="country-list hide">
                                     <li>
-                                        <a href="javascript: void(0)#">
+                                        <a href="javascript:void(0)">
                                             <span class="flag-icon flag-icon-gb"></span>
                                             <span>United Kingdom</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="javascript: void(0)#">
+                                        <a href="javascript:void(0)">
                                             <span class="flag-icon flag-icon-ye"></span>
                                             <span>Yemen</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="javascript: void(0)#">
+                                        <a href="javascript:void(0)">
                                             <span class="flag-icon flag-icon-eh"></span>
                                             <span>Western Sahara</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="javascript: void(0)#">
+                                        <a href="javascript:void(0)">
                                             <span class="flag-icon flag-icon-ae"></span>
                                             <span>United Arab Emirates</span>
                                         </a>
@@ -2022,6 +2064,6 @@
     </footer>
 
     </div>
-    <script src="Js/Cart-main.js"></script>
+    
   </body>
 </html>

@@ -1,0 +1,184 @@
+@include desk {
+    .content-sm,
+  .footer-md {
+    display: block !important;
+  }
+  .content-sm {
+    background: #232f3e;
+    color: $color;
+    .sm-top {
+      padding: 0.5rem;
+      @include display(flex, space-between, center, row nowrap);
+      &-R,
+      &-L {
+        min-width: 100px;
+        @include display(flex, space-between, center, row nowrap);
+        h3,
+        h4 {
+          font-size: text(14px);
+          padding-left: 0.5rem;
+          a.logo {
+            font-family: $logo-font;
+            letter-spacing: 2px;
+            font-size: text(25px) !important;
+            font-weight: 600;
+            color: #ee7d27;
+          }
+        }
+        a {
+          color: $color;
+        }
+      }
+      &-L {
+        min-width: 180px !important;
+        position: relative;
+        .sign {
+          h4 {
+            span {
+              display: inline-block;
+              padding-right: 0.5rem;
+            }
+          }
+        }
+        .cart-icon {
+          position: relative;
+          cursor: pointer;
+          .product-in-cart {
+            @include position(absolute, text(11px), text(21px), "", "", 10);
+            content: "";
+            font-size: text(13px);
+            color: #ee7d27;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .sm-Search {
+      height: text(44px);
+      position: relative;
+      margin: 0 0.5rem 0.5rem 0.5rem;
+
+      input {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 8px;
+        height: 100%;
+      }
+
+      .search {
+        @include position(absolute, 0, "", "", 0, 10);
+        content: "";
+        background: #fcbb6a;
+        width: text(44px);
+        height: text(44px);
+        border-radius: 8px;
+        font-size: text(24px);
+        @include display(flex, center, center, normal);
+      }
+    }
+
+    .sm-location {
+      font-size: text(15px);
+      padding: 0.7rem 0.5rem;
+      background: #37475a;
+      .fa-map-marker-alt {
+        font-size: text(24px);
+        display: inline-block;
+        padding-right: 0.3rem;
+      }
+    }
+  }
+  footer {
+    background: #0d141e;
+    .up {
+      text-align: center;
+      padding: 1rem;
+      background: #37475a;
+      cursor: pointer;
+      @include ease;
+      &:hover {
+        background: lighten(#37475a, 5);
+      }
+      a {
+        color: $color;
+        font-weight: 600;
+        letter-spacing: text(1px);
+        font-size: text(12px);
+      }
+    }
+
+    .footer-md {
+      .footer-content {
+        &-nav {
+          @include display(flex, center, center, normal);
+          background: #232f3e;
+          padding: 1rem 0;
+          ul {
+            max-width: text(300px);
+            font-size: text(13px);
+            @include grid(grid, repeat(2, 1fr), auto, 1rem);
+            li {
+              a {
+                color: $color;
+              }
+            }
+          }
+        }
+        &-footer {
+          ul {
+            @include display(flex, space-evenly, center, row wrap);
+            text-align: center;
+            li {
+              flex: 0 0 35%;
+              padding: 0.7rem 0;
+              font-size: text(14px);
+              a,
+              span {
+                color: $color;
+              }
+            }
+          }
+          .all-on-call {
+            padding: 0.5rem;
+            text-align: center;
+            color: $color;
+            a {
+              color: $color;
+            }
+            a.cu {
+              font-size: text(13px);
+            }
+            .terms {
+              font-size: text(10px);
+              padding: 0.5rem 0;
+              a {
+                padding-right: 0.5rem;
+              }
+            }
+            p {
+              padding: 1rem 0;
+              font-size: text(12px);
+            }
+          }
+        }
+      }
+    }
+  }
+  .content-lg,
+  .filters-lg,
+  .footer-lg,
+  .section-a
+   {
+    display: none;
+  }
+  .section--hidden {
+    opacity: 1 !important;
+    transform: translateY(0rem) !important;
+  }
+  .section-b {
+    // @include position(absolute, text(-350px), 0, 0, 0, 1);
+    margin-top: 0rem !important;
+  }
+}
